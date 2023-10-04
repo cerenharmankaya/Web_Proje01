@@ -1,0 +1,22 @@
+﻿@using Web_Proje01.Entity
+@model IEnumerable<Product>
+<h3>Popüler Ürünler</h3>
+
+<ul class="nav nav-list promowrapper">
+    @foreach (var item in Model)
+    {
+        <li>
+            <div class="thumbnail">
+
+                <img src="~/Content/Image/@item.image" style="max-width:207px; max-height:206px; min-width:207px; min-height:267px;" alt="">
+                               
+                <div class="caption">
+                    <h4><a class="defaultBtn" href="/Home/ProductDetails/@item.Id">Görüntüle</a> <span class="pull-right"> @item.Price TL</span></h4>
+                </div>
+            </div>
+        </li>
+        <li style="border:0"> &nbsp;</li>
+
+    }
+
+</ul>
